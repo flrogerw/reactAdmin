@@ -1,0 +1,18 @@
+machine:
+  node:
+    version: v6.2.0
+dependencies:
+  cache_directories:
+    - node_modules
+    - /home/ubuntu/nvm/versions/node/v6.3.1/bin
+    - /home/ubuntu/nvm/versions/node/v6.3.1/lib/node_modules
+test:
+  override:
+    - npm run lint
+    - npm run test
+deployment:
+  dev:
+    branch: master
+    commands:
+      - npm run build:stg
+      - aws s3 sync dist s3://admin.dev2.photoandgo.com --delete

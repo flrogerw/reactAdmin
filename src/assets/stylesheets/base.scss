@@ -1,0 +1,146 @@
+@import './reset.css';
+
+body {
+  color: #555;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+a {
+  color: #00bcd4;
+  text-decoration: none;
+}
+h1, h2, h3, h4 {
+  font-family: 'Open Sans', sans-serif;
+}
+h1 {
+  font-family: 'Roboto', sans-serif;
+}
+h2 {
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 18px;
+}
+.error {
+  color: #dd4b39;
+  font-size: 12px;
+}
+.auth-page {
+  padding: 5em 0;
+}
+.auth-page-link {
+  text-align: center;
+}
+.box {
+  width: 35%;
+}
+.box form{
+  background-color: #f7f7f9;
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1.5rem;
+  padding: 0px 40px 20px 40px;
+}
+
+.content {
+  margin: 0 5% 1rem 5%;
+  width: 90%;
+}
+
+.action-buttons {
+  padding-bottom: 2rem;
+  margin-right: 2%;
+  &.bottom {
+    padding: 1rem 0;
+    width: 100%;
+  }
+}
+
+.component {
+  box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
+  margin: 2rem 10%;
+
+  h2 {
+    color: rgba(0, 0, 0, 0.4);
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    background-color: #DDD;
+    padding: 1rem 5%;
+    text-align: left;
+    width: 90%;
+  }
+  
+  ul li {
+    list-style: none;
+    margin-bottom: 1rem;
+  }
+}
+
+.pagination {
+  float: right;
+  li {
+    border: 1px #DDD solid;
+    cursor: pointer;
+    display: inline-block;
+    float: left;
+    margin: 0 4px;
+    min-width: 20px;
+    padding: 0;
+    text-align: center;
+    &:first-child a, &:last-child a {
+      padding: 10px;
+    }
+    a {
+      display: block;
+      padding: 10px 20px;
+    }
+    &.disabled {
+      cursor: not-allowed;
+      pointer-events: none;
+      a {
+        color: #DDD;
+      }
+    }
+    &:first-child {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+    &:last-child {
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+    &.active, &:active{
+      background-color: #00bcd4;
+      a {
+        color: #FFF;
+      }
+    }
+    &:hover {
+      background-color: #DDD;
+    }
+    &.pageInput {
+      padding: 6px 10px;
+    }
+    input {
+      font-size: 1rem;
+      margin-right: 4px;
+      text-align: center;
+      width: 50px;
+    }
+  }
+}
+
+#action-buttons {
+  ul li {
+    float: left;
+    margin: 0;
+    &.is-disabled {
+      margin-top: 1.5rem;
+    }
+    &.edit, &.delete {
+      button {
+        padding-top: 24px !important;
+      }
+    }
+  }
+}
